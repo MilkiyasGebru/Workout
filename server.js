@@ -11,12 +11,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use((req,res,next) => {
-    console.log(req.method);
-    console.log(req.body)
-    next();
-})
-
 
 app.use('/api/workouts',workoutRoutes);
 
