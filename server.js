@@ -19,7 +19,7 @@ app.use('/api/workouts',workoutRoutes);
 database()
     .then(()=>{
         //Listen for requests
-        app.listen(process.env.PORT,()=>{
+        app.listen(process.env.PORT || 4000,()=>{
             console.log("Server is listening on port 4000!!")
         })
     })
