@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const database = require('./database');
 const workoutRoutes = require('./routes/workouts');
+const userRoutes = require('./routes/user_routes');
 
 
 // Initialize Express App
@@ -16,6 +17,7 @@ app.use(express.json());
 
 
 app.use('/api/workouts', cors(), workoutRoutes);
+app.use('/api/users', userRoutes);
 
 
 // Connect to database
