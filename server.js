@@ -1,6 +1,9 @@
 require('dotenv').config();
 
 const express = require('express');
+const cors = require('cors');
+
+
 const database = require('./database');
 const workoutRoutes = require('./routes/workouts');
 
@@ -12,7 +15,7 @@ const app = express();
 app.use(express.json());
 
 
-app.use('/api/workouts',workoutRoutes);
+app.use('/api/workouts', cors(), workoutRoutes);
 
 
 // Connect to database
