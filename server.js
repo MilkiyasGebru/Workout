@@ -16,7 +16,7 @@ const app = express();
 // Added a middleware to handle the request body properly
 app.use(express.json());
 
-
+// Added the cors to allow all different origins to access the workout routes
 app.use('/api/workouts', cors(), workoutRoutes);
 app.use('/api/users', userRoutes);
 
