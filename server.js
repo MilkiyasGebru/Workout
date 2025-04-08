@@ -13,6 +13,7 @@ const userRoutes = require('./routes/user_routes');
 const app = express();
 
 
+// Added a middleware to handle the request body properly
 app.use(express.json());
 
 
