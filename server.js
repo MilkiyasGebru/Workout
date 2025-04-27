@@ -18,7 +18,7 @@ app.use(express.json());
 
 // Added the cors to allow all different origins to access the workout routes
 app.use('/api/workouts', cors(), workoutRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/users', cors(), userRoutes);
 
 
 // Connect to database
